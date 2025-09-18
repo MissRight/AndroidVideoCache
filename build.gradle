@@ -1,14 +1,17 @@
 buildscript {
     repositories {
-        jcenter()
+        google()       // ✅ 使用 Google 仓库
+        mavenCentral() // ✅ 使用 Maven Central 仓库
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:4.2.2'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // 如果需要，添加 jitpack
     }
 }
